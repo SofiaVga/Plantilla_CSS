@@ -3,53 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de - Mi Aplicación Express</title>
+    <title>Acerca de - Aplicación de Rutas</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/about" class="active">Acerca de</a></li>
-                <li><a href="/contact">Contacto</a></li>
+        <nav class="navbar">
+            <div class="navbar-brand">RutasApp</div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="/" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link active">Acerca de</a></li>
+                <li class="nav-item"><a href="/contact" class="nav-link">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    
-    <main>
-        <h1>Acerca de</h1>
+
+    <div class="container">
+        <h1>Acerca del Proyecto</h1>
         
-        <section>
-            <h2>Proyecto Express con Rutas</h2>
-            <p>Esta aplicación es un ejemplo de cómo configurar un servidor Express con múltiples rutas.</p>
-            <p>Tecnologías utilizadas:</p>
+        <section class="main-section">
+            <h2>RutasApp</h2>
+            <p>Este proyecto es una demostración de cómo implementar múltiples rutas en una aplicación web usando Express.js.</p>
+            
+            <h2>Tecnologías utilizadas</h2>
             <ul>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
+                <li><strong>Node.js:</strong> Entorno de ejecución para JavaScript del lado del servidor</li>
+                <li><strong>Express.js:</strong> Framework web rápido y minimalista para Node.js</li>
+                <li><strong>HTML5:</strong> Para la estructura de la página</li>
+                <li><strong>CSS3:</strong> Para los estilos y diseño responsivo</li>
+                <li><strong>JavaScript:</strong> Para la interactividad del lado del cliente</li>
             </ul>
-        </section>
-        
-        <section>
+            
             <h2>Características</h2>
-            <p>Esta aplicación demuestra:</p>
+            <p>Esta aplicación implementa:</p>
             <ul>
-                <li>Configuración de servidor Express</li>
-                <li>Enrutamiento usando Express Router</li>
-                <li>Servir archivos estáticos</li>
+                <li>Múltiples rutas con Express</li>
+                <li>Diseño responsivo con CSS moderno</li>
+                <li>Formularios interactivos</li>
                 <li>Estructura de proyecto organizada</li>
             </ul>
         </section>
-    </main>
-    
+    </div>
+
     <footer>
-        <p>&copy; 2025 - Mi Aplicación Express con Rutas</p>
+        <p>&copy; 2025 RutasApp - Proyecto de Express con múltiples rutas</p>
     </footer>
-    
+
     <script src="/js/main.js"></script>
 </body>
 </html>

@@ -1,138 +1,229 @@
+/* styles.css - Plantilla CSS moderna para la aplicación de rutas */
 
-/* Estilos generales */
-* {
+/* --- Variables globales --- */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  /* --- Reseteo básico --- */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
-}
-
-/* Encabezado y navegación */
-header {
-    background-color: #35424a;
+    background-color: var(--light-color);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+  }
+  
+  a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* --- Header y navegación --- */
+  header {
+    background-color: var(--dark-color);
     color: white;
     padding: 1rem 0;
-}
-
-nav ul {
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .navbar {
     display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
     font-weight: bold;
+    color: white;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-item {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-link {
+    color: white;
     padding: 0.5rem 1rem;
-    transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #29353c;
     border-radius: 4px;
-}
-
-nav ul li a.active {
-    background-color: #e8491d;
-    border-radius: 4px;
-}
-
-/* Contenido principal */
-main {
+    transition: var(--transition);
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .nav-link.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  /* --- Contenedor principal --- */
+  .container {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 2rem;
-    min-height: calc(100vh - 140px);
-}
-
-h1 {
-    color: #35424a;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-h2 {
-    color: #35424a;
-    margin: 1.5rem 0 1rem;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-section {
-    margin-bottom: 2rem;
+  }
+  
+  /* --- Secciones principales --- */
+  .main-section {
     background-color: white;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Formularios */
-.form-container {
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+  }
+  
+  /* --- Títulos --- */
+  h1, h2, h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  /* --- Párrafos --- */
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  /* --- Formularios --- */
+  .form-container {
+    max-width: 500px;
+    margin: 0 auto;
     background-color: white;
     padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+  
+  .form-group {
     margin-bottom: 1.5rem;
-}
-
-.form-group label {
+  }
+  
+  .form-label {
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
+    font-weight: 600;
+  }
+  
+  .form-control {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
-}
-
-.form-group button {
-    background-color: #e8491d;
+    transition: var(--transition);
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
     color: white;
-    border: none;
     padding: 0.8rem 1.5rem;
-    font-size: 1rem;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.form-group button:hover {
-    background-color: #c13c16;
-}
-
-/* Login form */
-.login-form {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-/* Footer */
-footer {
-    background-color: #35424a;
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  .btn-block {
+    display: block;
+    width: 100%;
+  }
+  
+  /* --- Footer --- */
+  footer {
+    background-color: var(--dark-color);
     color: white;
     text-align: center;
-    padding: 1.5rem 0;
-}
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  footer p {
+    margin-bottom: 0;
+  }
+  
+  /* --- Responsive design --- */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    .navbar-brand {
+      margin-bottom: 1rem;
+    }
+    
+    .nav-list {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .nav-item {
+      margin: 0.3rem 0;
+      margin-left: 0;
+    }
+    
+    .nav-link {
+      display: block;
+      text-align: center;
+    }
+    
+    .container {
+      padding: 0 1rem;
+    }
+  }

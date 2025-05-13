@@ -3,40 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Mi Aplicación Express</title>
+    <title>Inicio - Aplicación de Rutas</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="/" class="active">Inicio</a></li>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/about">Acerca de</a></li>
-                <li><a href="/contact">Contacto</a></li>
+        <nav class="navbar">
+            <div class="navbar-brand">RutasApp</div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="/" class="nav-link active">Inicio</a></li>
+                <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link">Acerca de</a></li>
+                <li class="nav-item"><a href="/contact" class="nav-link">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    
-    <main>
-        <h1>Bienvenido a mi aplicación Express</h1>
-        <p>Esta es la página principal de la aplicación con rutas.</p>
-        <p>Esta aplicación demuestra el uso de Express para crear múltiples rutas y servir contenido estático.</p>
+
+    <div class="container">
+        <h1>Bienvenido a RutasApp</h1>
         
-        <section>
-            <h2>¿Qué puedes hacer aquí?</h2>
+        <section class="main-section">
+            <h2>Proyecto de Rutas con Express</h2>
+            <p>Esta aplicación demuestra el uso de múltiples rutas en Express.js junto con una plantilla CSS moderna.</p>
+            
+            <h2>Características principales</h2>
+            <p>Explora las diferentes secciones de la aplicación:</p>
             <ul>
-                <li>Navegar entre diferentes páginas usando las rutas configuradas</li>
-                <li>Ver cómo funciona el enrutamiento en Express</li>
-                <li>Explorar la estructura del proyecto</li>
+                <li>Inicio: Esta página principal</li>
+                <li>Login: Formulario de acceso</li>
+                <li>Acerca de: Información sobre el proyecto</li>
+                <li>Contacto: Formulario para contactarnos</li>
             </ul>
         </section>
-    </main>
-    
+    </div>
+
     <footer>
-        <p>&copy; 2025 - Mi Aplicación Express con Rutas</p>
+        <p>&copy; 2025 RutasApp - Proyecto de Express con múltiples rutas</p>
     </footer>
-    
+
     <script src="/js/main.js"></script>
 </body>
 </html>
